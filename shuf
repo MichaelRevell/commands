@@ -1,0 +1,6 @@
+#!/bin/bash
+# Mac does not have a random sort function
+# So I made one
+
+awk 'BEGIN { srand() } { print rand() "\t" $0 }' | sort -n | cut -f2-
+
